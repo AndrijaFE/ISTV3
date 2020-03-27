@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE AutoOglas SYSTEM "autooglas.dtd">
+<AutoOglas>
+<Automobil>
+<Proizvodjac>Mercedes Benz</Proizvodjac>
+<Model tip="SUV">Gle250</Model>
+<Godiste>2020</Godiste>
+<Farba tip="Metalik">Crna</Farba>
+<Zapremina jedinica="ccm">2998</Zapremina>
+<Transmisija tip="Automatik">6 Brzina</Transmisija>
+<Gorivo tng="da">Dizel</Gorivo>
+<Cena valuta="eur">120000</Cena>
+<Kontakt>0123456789</Kontakt>
+</Automobil>
+<Automobil>
+<Proizvodjac>RangeRover</Proizvodjac>
+<Model tip="SUV">Velar</Model>
+<Godiste>2070</Godiste>
+<Farba tip="Akril">Crvena</Farba>
+<Zapremina jedinica="ccm">3000</Zapremina>
+<Transmisija tip="Manuelni">5 Brzina</Transmisija>
+<Gorivo tng="ne">Dizel</Gorivo>
+<Cena valuta="eur">65000</Cena>
+<Kontakt>0123456789</Kontakt>
+</Automobil>
+
+
+</AutoOglas>

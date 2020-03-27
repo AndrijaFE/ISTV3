@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MojiPodaci>
+<PunoIme>
+<Ime>Andrija</Ime>
+<Prezime>Ninkovic</Prezime>
+</PunoIme>
+<DatumRodjenja>
+<Dan>25</Dan>
+<Mesec>3</Mesec>
+<Godina>2020</Godina>
+</DatumRodjenja>
+<Adresa>
+<Ulica>Vojvode Stepe 283</Ulica>
+<Naselje>Vozdovac</Naselje>
+<Grad>Beograd</Grad>
+<Drzava>Srbija</Drzava>
+<Ptt>11010</Ptt>
+</Adresa>
+</MojiPodaci>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Inbox xmlns="http://viser.edu.rs/mail">
+
+<posiljalac>Zika Zikic</posiljalac>
+<primalac>Jova Jovic</primalac>
+<cc>zika01@gmail.com</cc>
+<bcc>jova10@gmail.com</bcc>
+<naslov>Zadatak3</naslov>
+<tekst>Neki tekst Zadatka3</tekst>
+<datum>25.3.2020</datum>
+
+</Inbox>

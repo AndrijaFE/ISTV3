@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fakultet
+[
+<!ELEMENT fakultet (student+)>
+<!ELEMENT student (osoba,upis+)>
+<!ATTLIST student status (studira|diplomira) #REQUIRED>
+<!ATTLIST student index ID #REQUIRED>
+<!ELEMENT osoba (ime,prezime,mestoRodjenja,datumRodjenja)>
+<!ELEMENT upis (semestar+)>
+<!ATTLIST semestar broj CDATA #REQUIRED>
+<!ATTLIST semestar godina CDATA #REQUIRED>
+<!ATTLIST semestar vrsta (budzet|saf) #REQUIRED>
+<!ELEMENT ime (#PCDATA)>
+<!ELEMENT prezime (#PCDATA)>
+<!ELEMENT mestoRodjenja (#PCDATA)>
+<!ELEMENT datumRodjenja (#PCDATA)>
+<!ELEMENT semestar EMPTY>
+]>
+
+<fakultet>
+<student status="studira" index="NRT517">
+<osoba>
+<ime>Pera</ime>
+<prezime>Peric</prezime>
+<mestoRodjenja>Beograd</mestoRodjenja>
+<datumRodjenja>25.3.2020</datumRodjenja>
+</osoba>
+<upis>
+<semestar broj="6" godina="3" vrsta="budzet"></semestar>
+</upis>
+</student>
+</fakultet>
