@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="raspored_takmicenja" type="typerasporedutakmica"/>
+
+<xs:simpleType name="typeIme">
+    <xs:restriction base="xs:string"/>
+</xs:simpleType>
+
+<xs:simpleType name="typePrezime">
+    <xs:restriction base="xs:string"/>
+</xs:simpleType>
+
+<xs:simpleType name="typeKlub">
+    <xs:restriction base="xs:string"/>
+</xs:simpleType>
+
+<xs:simpleType name="typebrutakmica">
+    <xs:restriction base="xs:integer">
+        <xs:minInclusive value="0"/>
+    </xs:restriction>
+</xs:simpleType>
+<!--Igrac-->
+<xs:complexType name="typeIgrac">
+    <xs:sequence>
+        <xs:element name="ime" type="typeIme"/>
+        <xs:element name="prezime" type="typePrezime"/>
+        <xs:element name="klub" type="typeKlub"/>
+        <xs:element name="br_utakmica" type="typebrutakmica"/>
+        <xs:element name="medalje" type="typeMedalje"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="typeGodineTrener">
+    <xs:restriction base="xs:positiveInteger">
+        <xs:minInclusive value="18"/>
+    </xs:restriction>
+</xs:simpleType>
+<!--Trener-->
+<xs:complexType name="typeTrener">
+    <xs:sequence>
+        <xs:element name="ime" type="typeIme"/>
+        <xs:element name="prezime" type="typePrezime"/>
+        <xs:element name="godine" type="typeGodineTrener"/>
+    </xs:sequence>
+</xs:complexType>
+<!--Kontinent i zemlja-->
+<xs:simpleType name="typeKontinent">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="Afrika"/>
+        <xs:enumeration value="Azija"/>
+        <xs:enumeration value="Evropa"/>
+        <xs:enumeration value="Australija"/>
+        <xs:enumeration value="Juzna Amerika"/>
+        <xs:enumeration value="Severna Amerika"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="typeZemlja">
+    <xs:restriction base="xs:string"/>
+</xs:simpleType>
+
+<xs:simpleType name="typeMedalja">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="bronza"/>
+        <xs:enumeration value="srebro"/>
+        <xs:enumeration value="zlato"/>
+    </xs:restriction>
+</xs:simpleType>
+<!--Medalje-->
+<xs:complexType name="typeMedalje">
+    <xs:sequence>
+        <xs:element name="mesto" type="xs:string"/>
+        <xs:element name="medalja" type="typeMedalja" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="godina" type="xs:positiveInteger"/>
+    </xs:sequence>
+</xs:complexType>
+<!--Lokacija-->
+<xs:complexType name="typeLokacija">
+    <xs:sequence>
+        <xs:element name="region" type="xs:string"/>
+        <xs:element name="grad" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="stadion" type="xs:string" use="required"/>
+    <xs:attribute name="br_mesta" type="xs:integer" use="optional"/>
+</xs:complexType>
+<!--Termin-->
+<xs:complexType name="typeTermin">
+    <xs:sequence>
+        <xs:element name="datum" type="xs:date"/>
+        <xs:element name="cas" type="xs:time"/>
+    </xs:sequence>
+    <xs:attribute name="tv_prenos" type="xs:boolean" use="required"/>
+    <xs:attribute name="kanal" type="xs:string" use="optional"/>
+</xs:complexType>
+<!--Tim-->
+<xs:complexType name="typeTim">
+    <xs:sequence>
+        <xs:element name="igrac" type="typeIgrac"/>
+        <xs:element name="trener" type="typeTrener"/>
+        <xs:element name="kontinent" type="typeKontinent"/>
+        <xs:element name="zemlja" type="typeZemlja"/>
+        <xs:element name="medalje" type="typeMedalje"/>
+    </xs:sequence>
+</xs:complexType>
+<!--Utakmica-->
+<xs:complexType name="typeUtakmica">
+    <xs:sequence>
+        <xs:element name="tim1" type="typeTim"/>
+        <xs:element name="tim2" type="typeTim"/>
+        <xs:element name="lokacija" type="typeLokacija"/>
+        <xs:element name="termin" type="typeTermin"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="typerasporedutakmica">
+    <xs:sequence>
+        <xs:element name="Utakmica" type="typeUtakmica"/>
+    </xs:sequence>
+</xs:complexType>
+
+
+
+</xs:schema>

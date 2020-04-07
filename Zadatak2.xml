@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Porudzbine xmlns:xs="http://temputi.org/XMLSchema.xsd">
+    <Porudzbina>
+        <Kupac>
+            <Ime>Pera</Ime>
+            <Prezime>Peric</Prezime>
+            <Telefon>011/123-45-67</Telefon>
+        </Kupac>
+        <Stavka>
+            <Proizvod>Monitor</Proizvod>
+            <Cena>12000</Cena>
+            <Kolicina>1</Kolicina>
+        </Stavka>
+        <Stavka>
+            <Proizvod>Sijalica</Proizvod>
+            <Cena>102.8</Cena>
+            <Kolicina>2</Kolicina>
+        </Stavka>
+    </Porudzbina>
+</Porudzbine>

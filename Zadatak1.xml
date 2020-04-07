@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<studenti xmlns:xs="http://viser.edu.rs/XMLSchema.xsd">
+    <Student>
+        <Osoba>
+            <Ime>Pera</Ime>
+            <Prezime>Peric</Prezime>
+            <JMBG>1234567891234</JMBG>
+        </Osoba>
+        <Indeks>NRT-38/04</Indeks>
+        <DatumUpisa>1900-01-01</DatumUpisa>
+    </Student>
+</studenti>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="Porudzbine" type="typePorudzbine"/>
+
+<xs:simpleType name="typeIme">
+    <xs:restriction base="xs:string"/>
+</xs:simpleType>
+
+<xs:simpleType name="typePrezime">
+    <xs:restriction base="xs:string"/>
+</xs:simpleType>
+
+<xs:simpleType name="typeTelefon">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="[0-9]{3}[/]{1}[0-9]{3}[\-]{1}[0-9]{2}[\-]{1}[0-9]{2}"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="typeProizvod">
+    <xs:restriction base="xs:string"/>
+</xs:simpleType>
+
+<xs:simpleType name="typeCena">
+    <xs:restriction base="xs:float"/>
+</xs:simpleType>
+
+<xs:simpleType name="typeKolicina">
+    <xs:restriction base="xs:positiveInteger"/>
+</xs:simpleType>
+
+<xs:complexType name="typeKupac">
+    <xs:sequence>
+        <xs:element name="Ime" type="typeIme"/>
+        <xs:element name="Prezime" type="typePrezime"/>
+        <xs:element name="Telefon" type="typeTelefon"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="typeStavka">
+    <xs:sequence>
+        <xs:element name="Proizvod" type="typeProizvod"/>
+        <xs:element name="Cena" type="typeCena"/>
+        <xs:element name="Kolicina" type="typeKolicina"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="typePorudzbina">
+    <xs:sequence>
+        <xs:element name="Kupac" type="typeKupac" minOccurs="1" maxOccurs="1" />
+        <xs:element name="Stavka" type="typeStavka" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="typePorudzbine">
+    <xs:sequence>
+        <xs:element name="Porudzbina" type="typePorudzbina"/>
+    </xs:sequence>
+</xs:complexType>
+
+</xs:schema>
